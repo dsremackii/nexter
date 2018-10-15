@@ -1,32 +1,19 @@
-/* edit how you want to use global html */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  
-  
- div {
-   height: 400px;
-   background-color: grey;
-  
- }
-
- .lll {
-   display: block;
-   background-repeat: no-repeat;
-   background-color: grey;
-  
-   
- }
-  
+  font-family: $font-primary;
+  color:$color-grey-dark-2;
+  font-weight:300;
+  line-height:1.6;
+}

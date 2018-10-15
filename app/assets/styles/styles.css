@@ -6,3 +6,12 @@
 @import "base/_global";
 @import "modules/_sprite";
 
+@import "modules/_sidebar";
+@import "modules/_header";
+@import "modules/_realtors";
+@import "modules/_features";
+@import "modules/_story";
+@import "modules/_homes";
+@import "modules/_gallery";
+@import "modules/_footer";
+
