@@ -1,0 +1,96 @@
+npm init
+
+npm install jquery --save
+
+npm install normalize.css --save
+
+npm install --> watch directory and look package.json and install all in it
+
+GULP --> automation = recorder = and much more
+
+npm install gulp-cli --global
+
+npm upgrade gulp-cli --global --> see on google if it is correct
+
+gulp -v
+
+
+then install in project
+
+npm install gulp --save-dev
+
+npm install gulp-watch --save-dev
+
+gulp watch
+
+npm install gulp-postcss --save-dev
+
+npm install autoprefixer --save-dev
+
+npm install postcss-import --save-dev
+
+npm install browser-sync --save-dev
+
+npm install postcss-mixins --save-dev
+
+
+automated sprites
+
+npm install gulp-svg-sprite --save-dev    gulp createSprite
+
+npm install gulp-rename --save-dev
+
+                 gulp icons --->FINAL sprite from images
+
+npm install del --save-dev
+
+npm install postcss-hexrgba --save-dev 
+
+npm install webpack -g
+
+npm install webpack --save-dev
+
+npm install babel-core babel-loader babel-preset-es2015 --save-dev
+
+npm install waypoints --save
+
+npm install jquery-smooth-scroll --save
+
+npm install lazysizes --save
+
+npm install picturefill --save
+
+npm install gulp-imagemin --save-dev      //for images minimize
+
+                                    gulp build
+
+npm install gulp-usemin --save-dev
+
+npm install gulp-rev gulp-cssnano gulp-uglify --save-dev //commpress
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
