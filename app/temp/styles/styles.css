@@ -548,6 +548,40 @@ Instead edit gulp/templates/sprite */
     background-position: 92.09302325581395% 51.92307692307692%;
   }
 
+%heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:400;
+}
+
+.heading-1 {
+
+  @extend %heading;
+}
+
+.heading-2 {
+
+  @extend %heading;
+}
+
+.heading-3 {
+
+  @extend %heading;
+}
+
+.heading-4 {
+
+  @extend %heading;
+  font-size:1.9rem;
+}
+
+.heading-4--light {
+  color: #f9f7f6;
+}
+
+.heading-4--dark {
+  color: #54483A;
+}
+
 .container {
     display: -ms-grid;
     display: grid;
@@ -555,11 +589,8 @@ Instead edit gulp/templates/sprite */
         grid-template-rows: 80vh min-content 40vw repeat(3,min-content);
     -ms-grid-columns:[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] ([col-start]minmax(min-content, 14rem)[col-end])[8] [center-end] minmax(6rem, 1fr)  [full-end];
         grid-template-columns:[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start]minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr)  [full-end];
-}
 
-.container > * {
-  padding: 40px;
-  font-size:3rem;
+    
 }
 
 .sidebar {
@@ -579,8 +610,45 @@ Instead edit gulp/templates/sprite */
 }
 
 .features {
-    background-color: #aaa;
     grid-column: center-start / center-end;
+
+    margin:15rem 0;
+    display:-ms-grid;
+    display:grid;
+    /* grid-template-columns:repeat(3, 1fr); */
+
+    -ms-grid-columns:(minmax(25rem, 1fr))[auto-fit];
+
+        grid-template-columns:repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+
+}
+
+.features__feature {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns:min-content 1fr;
+      grid-template-columns:min-content 1fr;
+  grid-row-gap: 1rem;
+  grid-column-gap: 6rem;
+  -ms-flex-align:start;
+      align-items:start;
+}
+
+/*strech default*/
+
+.features__feature--icon {
+  fill:#c69963;
+  width:4.5rem;
+  height: 4.5rem;
+  -ms-grid-row-span: 2;
+  -ms-grid-row: 1;
+      grid-row: 1 / span 2;
+  transform: translateY(-1rem)
+}
+
+.features__feature--text {
+  font-size: 1.7rem;
 }
 
 .story__pictures {
