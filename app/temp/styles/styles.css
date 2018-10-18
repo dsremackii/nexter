@@ -557,6 +557,9 @@ Instead edit gulp/templates/sprite */
 .heading-1 {
 
   @extend %heading;
+  font-size: 4.5rem;
+  color: #f9f7f6;
+  line-height:1;
 }
 
 .heading-2 {
@@ -643,11 +646,141 @@ Instead edit gulp/templates/sprite */
     background-color: #c69963;
     grid-column: sidebar-start / sidebar-end;
     grid-row: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 62.5em) {
+
+  .sidebar {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.nav-btn {
+    border: none;
+    border-radius: 0;
+
+    background-color: #FFF;
+    height: 2px;
+    width: 4.5rem;
+    margin-top: 4rem;
+}
+
+.nav-btn::before,
+    .nav-btn::after {
+  background-color: #FFF;
+  height: 2px;
+  width: 4.5rem;
+  content: "";
+  display: block;
+}
+
+.nav-btn::before {
+  -webkit-transform: translateY(-1.5rem);
+          transform: translateY(-1.5rem);
+}
+
+.nav-btn::after {
+  -webkit-transform: translateY(1.3rem);
+          transform: translateY(1.3rem);
+}
+
+@media only screen and (max-width: 62.5em) {
+
+  .nav-btn {
+    margin-top: 0;
+    margin-right: 3rem;
+  }
+
+  .nav-btn::before {
+    -webkit-transform: translateY(-1.2rem);
+            transform: translateY(-1.2rem);
+  }
+
+  .nav-btn::after {
+    -webkit-transform: translateY(1rem);
+            transform: translateY(1rem);
+  }
 }
 
 .header {
     background-color: #54483A;
     grid-column: full-start / col-end 6;
+    background-image: linear-gradient(rgba(16,29,44, .93), rgba(16,29,44, .93)), url(../../assets/images/hero.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 8rem;
+    padding-top: 4rem;
+
+    display: grid;
+    grid-template-rows: 1fr -webkit-min-content minmax(6rem, -webkit-min-content) 1fr;
+    grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-columns: minmax(-webkit-min-content, -webkit-max-content);
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 1.5rem;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 50em) {
+
+  .header {
+    grid-column: 1 / -1;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+
+  .header {
+    padding: 5rem;
+  }
+}
+
+.header__logo {
+  height: 3rem;
+  justify-self: center;
+}
+
+.header__btn {
+  align-self: start;
+  justify-self: start;
+}
+
+.header__seenon-text {
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content 1fr;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 1.5rem;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #aaa;
+}
+
+.header__seenon-text::before,
+        .header__seenon-text::after {
+  content: "";
+  height: 1px;
+  display: block;
+  background-color: currentColor;
+}
+
+.header__seenon-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 3rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.header__seenon-logos img {
+  max-height: 2.5rem;
+  max-width: 100%;
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
 }
 
 .realtors {
@@ -671,8 +804,8 @@ Instead edit gulp/templates/sprite */
   display: grid;
   grid-template-columns:-webkit-min-content 1fr;
   grid-template-columns:min-content 1fr;
-  grid-row-gap: 1rem;
-  grid-column-gap: 6rem;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
   align-items:start;
 }
 
@@ -736,6 +869,7 @@ Instead edit gulp/templates/sprite */
 
 .homes {
     grid-column: center-start / center-end;
+    margin: 15rem 0;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -817,15 +951,14 @@ Instead edit gulp/templates/sprite */
     background-color: #f9f7f6;
     grid-column: full-start / full-end;
 
-    display:grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows:repeat(7, 5vw);
-    grid-gap: 1.5rem;
+    display: grid;
+    /*grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw);*/
+    grid-template: repeat(7, 5vw) / repeat(8, 1fr);
+
+
+    grid-gap: 1.5rem; 
     padding: 1.5rem;
-
-   
-
-
 }
 
 .gallery__item--1 {
