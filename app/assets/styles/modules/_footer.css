@@ -7,8 +7,9 @@
 
 .nav {
     list-style: none;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 2rem;
     align-items: center;
 
@@ -29,7 +30,7 @@
 
     &__link:hover,
     &__link:active {
-        background-color: rgba(#fff, .05);
+        background-color: rgba($mainWhite, .05);
         transform:translateY(-3px);
     }
 }
